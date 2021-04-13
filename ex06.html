@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+* {
+	margin: 0; /*모든 값의 마진을 없에야 배치하기 쉽다.*/
+}
+
+.wrap {
+	display: flex; /*이것에 종속되에 있는 태그들은 가로 배치 하겠다.*/
+	flex-flow: column; /*세로 정렬*/
+	width: 500px;
+	background-color: aqua;
+	margin: auto;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.wrap .a {
+	order: 1; /*순서를 바꿀 수 있다.*/
+	width: 33.3333%;
+	background-color: yellow;
+}
+
+.wrap .b {
+	order: 2;
+	width: 33.3333%;
+	background-color: green;
+}
+
+.wrap .c {
+	display: flex;
+	order: 3;
+	width: 33.3333%;
+	background-color: orange;
+}
+
+.h3 {
+	order: 3;
+	width: 33.3333%;
+	background-color: maroon;
+}
+
+.h1 {
+	order: 1;
+	width: 33.3333%;
+	background-color: gray;
+}
+
+.h2 {
+	order: 2;
+	width: 33.3333%;
+	background-color: fuchsia;
+}
+</style>
+<body>
+	<div class="wrap">
+		<div class="a">
+			<h1>1</h1>
+		</div>
+		<div class="b">
+			<h1>2</h1>
+		</div>
+		<div class="c">
+			<h1 class="h3">c3</h1>
+			<h1 class="h1">c1</h1>
+			<h1 class="h2">c2</h1>
+
+		</div>
+	</div>
+</body>
+</html>

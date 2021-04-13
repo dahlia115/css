@@ -5,19 +5,76 @@
 <title>Insert title here</title>
 </head>
 <style>
-	div{
-		background-color: yellow;
-		width: 300px;
-		padding: 25px;
-		border: 15px solid navy;
-		margin: 25px;
-	}
+div {
+	background-color: yellow;
+	width: 300px;
+	padding: 25px;
+	border: 15px solid navy;
+	margin: 25px;
+}
+
+.title {
+	/*그림자 효과 오른 아래 번짐 색상 */
+	text-shadow: 10px 10px 15px black;
+	font-size: 70pt;
+}
+
+img {
+	width: 100px;
+	height: 100px;
+}
+
+.shadow {
+	box-shadow: 5px 5px 5px gray;
+}
+
+.a {
+	background-color: aqua;
+	width: 1000px;
+	margin: auto; /* 가운데 정렬 */
+}
+/*border 사이즈로 인해 배치가 어긋남*/
+.b {
+	background-color: blue;
+	width: 600px;
+	/*width: 70%;*/
+	float: left;
+	border: 1px solid black;
+}
+
+.c {
+	background-color: gray;
+	width: 400px;
+	/*width: 30%;*/
+	float: right;
+	border: 1px solid black;
+}
+
+* {
+ box-sizing: border-box;	/* 안쪽으로 두깨를 차지해서 전체적 사이즈는 맞는다.*/
+}
+
+.aa{border: 10px solid black; width: 150px;}
+.bb{border: 30px solid black; width: 150px;}
+
 </style>
 <body>
+<section class="aa">test</section>
+<section class="bb">test</section>
+
+<hr>
+	<section class="a">
+		<section class="b">왼쪽배치</section>
+		<section class="c">오른쪽배치</section>
+	</section>
+
+	<hr>
+	<img src="test.jpg" class="shadow">
+	<hr>
+	<h1 class="title">내용 들어가는 곳~</h1>
+
 	<p>padding , margin 확인하기</p>
-	<div>
-		padding , margin은 top, bottom ,legt, right를 이용하여 지정할 수 있으며,
-		하나만 줄 경우 위, 오른, 아래, 왼쪽의 공간을 주며 2개를 줬을 경우 위-아래, 왼-오른
-	</div>
+	<div>padding , margin은 top, bottom ,left, right를 이용하여 지정할 수 있으며,
+		하나만 줄 경우 위, 오른, 아래, 왼쪽의 공간을 주며 2개를 줬을 경우 위-아래, 왼-오른</div>
 </body>
 </html>
