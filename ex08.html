@@ -1,122 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.wrap {
-	display: flex;
-	flex-flow: column;
-	box-sizing: border-box;
-	width: 500px;
-	height: 400px;
-	margin: 0 auto;
-	overflow: hidden;
-}
-
-.main_header {
-	order: 1;
-	border-style: solid;
-	text-align: center;
-	height: 20%;
-	background: red;
-}
-
-.section {
-	order: 2;
-	display: flex;
-	background: pink;
-	height: 60%;
-}
-
-.section nav {
-	order: 1;
-	background: gold;
-	width: 15%;
-	height: 100%;
-	border-style: solid;
-}
-
-.section section {
-	order: 2;
-	background: green;
-	width: 60%;
-	height: 100%;
-	border-style: solid;
-}
-
-.section aside {
-	order: 3;
-	background: gold;
-	border-style: solid;
-	width: 25%;
-	height: 100%;
-}
-
-footer {
-	order: 3;
-	border-style: solid;
-	height: 20%;
-	background: pink;
-}
-
-.in_section {
-	display: flex;
-	flex-flow: column;
-}
-
-h3 {
-	text-align: center;
-}
-
-.in_section header {
-	order: 1;
-	margin: 10px;
-	height: 30px;
-	border-style: solid;
-	text-align: center;
-	background: skyblue;
-}
-
-.in_section article {
-	order: 2;
-	margin: 10px;
-	height: 30px;
-	border-style: solid;
-	text-align: center;
-	background: gold;
-}
-
-.in_section footer {
-	order: 3;
-	margin: 10px;
-	height: 30px;
-	border-style: solid;
-	text-align: center;
-}
-</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
-<body>
-	<div class="wrap">
-		<header class="main_header">
-			<h1>&lt; header &gt;</h1>
-		</header>
-		<div class="section">
-			<nav>
-				<h3>nav</h3>
-			</nav>
-			<aside>
-				<h3>aside</h3>
-			</aside>
-			<section class="in_section">
-				<h3>section1</h3>
-				<header>header</header>
-				<article>article</article>
-				<footer>footer</footer>
-			</section>
-		</div>
-		<footer>
-			<h3>&lt; footer &gt;</h3>
-		</footer>
-	</div>
-</body>
+<style>
+.p1 {
+	z-index:1;	/* 순서 조정 */
+	position: fixed;
+	right: 30px;
+	top: 10px;
+	background-color: gray;
+	width: 400px;
+	height: 50px;
+}
+.p2 {
+	z-index:-1;
+	position: absolute;
+	right: 60px;
+	top: 20px;
+	background-color: green;
+	width: 400px;
+	height: 50px;
+}
+h1{
+	z-index:0;
+	width: 400px; height: 50px; background-color: olive;
+}
 
+</style>
+<body>
+	<h1>position style</h1>
+	<h1>position style</h1>
+	<h1>position style</h1>
+	<h1>position style</h1>
+	<h1>position style</h1>
+	<p class="p1">고정위치 -right 30px top 10px<br><a href="#">클릭</a></p> <!-- 화면이 움직여도 움직임에 맞게 고정 -->
+	<p class="p2">절대위치 -right 60px top 20px</p> <!-- 화면이 움직여도 지정된 위치에 고정 -->
+</body>
 </html>
